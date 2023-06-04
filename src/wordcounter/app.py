@@ -4,6 +4,14 @@ Simple BeeWare App to count words
 import toga
 from toga.style import Pack
 from toga.style.pack import COLUMN, ROW
+import re
+
+
+def count_words(sentence: str) -> int:
+    if not isinstance(sentence, str):
+        raise TypeError("expected string")
+
+    return len(re.findall(r'\w+', sentence))
 
 
 class WordCounter(toga.App):
