@@ -19,3 +19,10 @@ def test_count_words_corner_cases():
 
     with pytest.raises(TypeError, match="expected string"):
         count_words(None)
+
+
+def test_wrong_count_words():
+    sentence = '123456abc   555%%%abc'
+
+    with pytest.raises(TypeError):
+        count_words(sentence)

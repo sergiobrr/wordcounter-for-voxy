@@ -5,11 +5,16 @@ import toga
 from toga.style import Pack
 from toga.style.pack import COLUMN, ROW
 import re
+import string
 
 
 def count_words(sentence: str) -> int:
     if not isinstance(sentence, str):
         raise TypeError("expected string")
+
+    for c in string.punctuation:
+        if c in sentence and c not in ['.', ',', '!', '?', ':', ';', '-', "'", '"']:
+            raise TypeError("expected string")
 
     return len(re.findall(r'\w+', sentence))
 
