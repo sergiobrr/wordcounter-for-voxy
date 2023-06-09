@@ -9,6 +9,15 @@ Simple BeeWare App to count words
 .. _`Briefcase`: https://briefcase.readthedocs.io/
 .. _`The BeeWare Project`: https://beeware.org/
 
+**Install dependancies**
+
+* ``sudo apt-get update``
+* ``sudo apt-get install build-essential git python3-dev python3-venv python3-cairo-dev python3-gi-cairo libgirepository1.0-dev libcairo2-dev libpango1.0-dev gir1.2-webkit2-4.0 pkg-config``
+
+ for not debian based os: follow this instructions_
+
+.. _instructions: https://docs.beeware.org/en/latest/tutorial/tutorial-0.html
+
 **How to use**
 
 * Clone the repo
